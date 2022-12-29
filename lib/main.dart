@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'components/masked_image.dart';
+import 'package:movies_app/screens/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Scaffold(
-        body: MaskedImage(asset: "assets/images/posters/img-eternals.jpg", mask: "assets/mask/mask.png"),
+        body: OnboardingScreen(),
       ),
     );
   }
