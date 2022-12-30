@@ -23,7 +23,7 @@ class Movie {
 List<Movie> newMovies = [
   Movie(
     movieName: 'Spider-Man: No Way Home',
-    moviePoster: 'assets/movie-posters/img-spiderman.jpg',
+    moviePoster: 'assets/images/posters/img-spiderman.jpg',
     movieReleaseYear: '2021',
     movieCategory: 'Action-Adventure-Fantasy',
     movieDuration: '2h 28m',
@@ -34,7 +34,7 @@ List<Movie> newMovies = [
   ),
   Movie(
     movieName: 'The Matrix Resurrections',
-    moviePoster: 'assets/movie-posters/img-matrix.jpg',
+    moviePoster: 'assets/images/posters/img-matrix.jpg',
     movieReleaseYear: '2021',
     movieCategory: 'Action-Sci-Fi',
     movieDuration: '2h 28m',
@@ -45,7 +45,7 @@ List<Movie> newMovies = [
   ),
   Movie(
     movieName: 'Eternals',
-    moviePoster: 'assets/movie-posters/img-eternals.jpg',
+    moviePoster: 'assets/images/posters/img-eternals.jpg',
     movieReleaseYear: '2021',
     movieCategory: 'Action-Adventure-Fantasy',
     movieDuration: '2h 36m',
@@ -59,7 +59,7 @@ List<Movie> newMovies = [
 var upcomingMovies = [
   Movie(
     movieName: 'Aquaman',
-    moviePoster: 'assets/movie-posters/img-aquaman.jpg',
+    moviePoster: 'assets/images/posters/img-aquaman.jpg',
     movieReleaseYear: '2018',
     movieCategory: 'Action-Adventure-Fantasy',
     movieDuration: '2h 23m',
@@ -70,7 +70,7 @@ var upcomingMovies = [
   ),
   Movie(
     movieName: 'Batman',
-    moviePoster: 'assets/movie-posters/img-batman.jpg',
+    moviePoster: 'assets/images/posters/img-batman.jpg',
     movieReleaseYear: '2022',
     movieCategory: 'Action-Crime-Drama',
     movieDuration: '2h 56m',
@@ -81,7 +81,7 @@ var upcomingMovies = [
   ),
   Movie(
     movieName: 'Sonic the Hedgehog 2',
-    moviePoster: 'assets/movie-posters/img-sonic.jpg',
+    moviePoster: 'assets/images/posters/img-sonic.jpg',
     movieReleaseYear: '2022',
     movieCategory: 'Animation-Action-Adventure',
     movieDuration: '2h 2m',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movies_app/screens/homeScreen.dart';
 import 'package:movies_app/screens/onboarding_screen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.openSans().fontFamily,
        ),
       home: const Scaffold(
-        body: OnboardingScreen(),
+        body: HomeScreen(),
       ),
     );
   }
