@@ -50,7 +50,7 @@ class OnboardingScreen extends StatelessWidget {
               child: Container(
                 width: 200,
                 height: 200,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Constants.cGreenColor,
                 ),
@@ -108,7 +108,80 @@ class OnboardingScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: screenHeight * 0.09,),
+                  SizedBox(height: screenHeight * 0.09),
+                  Text(
+                    "Assista os filmes em\nRealidade virtual",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Constants.cWhiteColor.withOpacity(0.85),
+                      fontSize: screenHeight <= 667 ? 18 : 34,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  SizedBox(height: screenHeight * 0.05),
+                  Text(
+                    "Baixe e assista off-line\nonde você estiver",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Constants.cWhiteColor.withOpacity(0.75),
+                      fontSize: screenHeight <= 667 ? 12 : 16,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  SizedBox(height: screenHeight * 0.03),
+                  CustomOutline(
+                    strokeWidth: 3,
+                    radius: 20,
+                    gradient: const LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [Constants.cPinkColor, Constants.cGreenColor],
+                    ),
+                    width: 160,
+                    height: 38,
+                    padding: const EdgeInsets.all(3),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Constants.cPinkColor.withOpacity(0.5),
+                            Constants.cGreenColor.withOpacity(0.5),
+                          ],
+                        ),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "Cadastre-se",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Constants.cWhiteColor,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const Spacer(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(
+                      3,
+                      (index) {
+                        return Container(
+                          height: 7,
+                          width: 7,
+                          margin: const EdgeInsets.symmetric(horizontal: 4),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: index == 0 ? Constants.cGreenColor : Constants.cWhiteColor.withOpacity(0.2),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  SizedBox(height: screenHeight * 0.01),
                 ],
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movies_app/screens/onboarding_screen.dart';
 
 void main() {
@@ -14,8 +15,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Movies App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+        fontFamily: GoogleFonts.openSans().fontFamily,
+       ),
       home: const Scaffold(
         body: OnboardingScreen(),
       ),
