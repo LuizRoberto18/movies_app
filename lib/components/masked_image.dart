@@ -7,14 +7,14 @@ class MaskedImage extends StatelessWidget {
   final String? asset;
   final String? mask;
 
-  const MaskedImage({Key? key, this.asset, this.mask}) : super(key: key);
+  const MaskedImage({Key? key, required this.asset, required this.mask}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         return FutureBuilder<List>(
-          future: _createShaderAndImage(asset ?? "", mask ?? "", constraints.maxWidth, constraints.maxHeight),
+          future: _createShaderAndImage(asset!, mask!, constraints.maxWidth, constraints.maxHeight),
           builder: (context, AsyncSnapshot snapshot) {
             if (!snapshot.hasData) return const SizedBox.shrink();
             return ShaderMask(

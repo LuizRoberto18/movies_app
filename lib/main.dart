@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movies_app/screens/homeScreen.dart';
 import 'package:movies_app/screens/onboarding_screen.dart';
+import 'package:movies_app/utils/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +18,12 @@ class MyApp extends StatelessWidget {
       title: 'Movies App',
       theme: ThemeData(
         fontFamily: GoogleFonts.openSans().fontFamily,
-       ),
-      home: const Scaffold(
-        body: HomeScreen(),
       ),
+      home: const OnboardingScreen(),
+      routes: {
+        AppRoutes.logonScreen: (ctx) => const OnboardingScreen(),
+        AppRoutes.homeScreen: (ctx) => const HomeScreen(),
+      },
     );
   }
 }

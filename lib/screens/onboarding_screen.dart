@@ -140,24 +140,29 @@ class OnboardingScreen extends StatelessWidget {
                     width: 160,
                     height: 38,
                     padding: const EdgeInsets.all(3),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            Constants.cPinkColor.withOpacity(0.5),
-                            Constants.cGreenColor.withOpacity(0.5),
-                          ],
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/home');
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Constants.cPinkColor.withOpacity(0.5),
+                              Constants.cGreenColor.withOpacity(0.5),
+                            ],
+                          ),
                         ),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          "Cadastre-se",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Constants.cWhiteColor,
+                        child: const Center(
+                          child: Text(
+                            "Cadastre-se",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Constants.cWhiteColor,
+                            ),
                           ),
                         ),
                       ),
