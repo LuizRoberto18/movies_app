@@ -33,7 +33,7 @@ class SearchFieldWidget extends StatelessWidget {
                   letterSpacing: -0.41,
                 ),
                 decoration: InputDecoration(
-                  helperText: 'Search',
+                  helperText: 'Pesquisar',
                   border: InputBorder.none,
                   isDense: true,
                   hintStyle:

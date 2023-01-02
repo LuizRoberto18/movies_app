@@ -31,16 +31,16 @@ class MaskedImage extends StatelessWidget {
   Future<List> _createShaderAndImage(
     String asset,
     String mask,
-    double width,
-    double height,
+    double w,
+    double h,
   ) async {
     ByteData data = await rootBundle.load(asset);
-    ByteData maskData = await rootBundle.load(asset);
+    ByteData maskData = await rootBundle.load(mask);
 
     Codec codec = await instantiateImageCodec(
       maskData.buffer.asUint8List(),
-      targetWidth: width.toInt(),
-      targetHeight: height.toInt(),
+      targetWidth: w.toInt(),
+      targetHeight: h.toInt(),
     );
     FrameInfo fi = await codec.getNextFrame();
     ImageShader shader = ImageShader(
@@ -52,8 +52,8 @@ class MaskedImage extends StatelessWidget {
     Image image = Image.memory(
       data.buffer.asUint8List(),
       fit: BoxFit.cover,
-      width: width,
-      height: height,
+      width: w,
+      height: h,
     );
     return [shader, image];
   }

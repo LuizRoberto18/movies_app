@@ -6,6 +6,7 @@ import 'package:glassmorphism/glassmorphism.dart';
 import 'package:movies_app/components/masked_image.dart';
 import 'package:movies_app/components/search_field_widget.dart';
 import 'package:movies_app/models/movies.dart';
+import 'package:movies_app/utils/app_routes.dart';
 
 import '../utils/constants.dart';
 
@@ -110,24 +111,25 @@ class _HomeScreenState extends State<HomeScreen> {
                       scrollDirection: Axis.horizontal,
                       itemCount: newMovies.length,
                       itemBuilder: (context, index) {
-                        String mask;
+                        String? mask;
                         if (index == 0) {
                           mask = Constants.cMaskFirstIndex;
-                        } else if (index == newMovies.length - 1) {
-                          mask = Constants.cMaskLastIndex;
+                        } else if (index == upcomingMovies.length - 1) {
+                          mask = Constants.cMaskCenter;
                         } else {
                           mask = Constants.cMaskCenter;
                         }
                         return GestureDetector(
+                          onTap: () => Navigator.pushNamed(context, AppRoutes.movieDetailScreen),
                           child: Container(
                             margin: EdgeInsets.only(
-                              left: index == 0 ? 20 : 5,
+                              left: index == 0 ? 20 : 0,
                             ),
                             height: 160,
                             width: 142,
                             child: MaskedImage(
-                              asset: newMovies[index].moviePoster,
                               mask: mask,
+                              asset: newMovies[index].moviePoster,
                             ),
                           ),
                         );
@@ -159,9 +161,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           mask = Constants.cMaskCenter;
                         }
                         return GestureDetector(
+                          onTap: () => Navigator.pushNamed(context, AppRoutes.movieDetailScreen),
                           child: Container(
                             margin: EdgeInsets.only(
-                              left: index == 0 ? 20 : 5,
+                              left: index == 0 ? 20 : 0,
                             ),
                             height: 160,
                             width: 142,

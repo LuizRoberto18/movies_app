@@ -56,7 +56,7 @@ List<Movie> newMovies = [
   ),
 ];
 
-var upcomingMovies = [
+List<Movie> upcomingMovies = [
   Movie(
     movieName: 'Aquaman',
     moviePoster: 'assets/images/posters/img-aquaman.jpg',
@@ -90,4 +90,11 @@ var upcomingMovies = [
         'When the manic Dr Robotnik returns to Earth with a new ally, Knuckles the Echidna, Sonic and his new friend Tails is all that stands in their way.',
     movieCast: ['Ben Schwartz', 'Idris Elba', 'Colleen O\'Shaughnessey'],
   ),
+];
+
+List<String> castMovies = [
+  'https://m.media-amazon.com/images/M/MV5BODg3MzYwMjE4N15BMl5BanBnXkFtZTcwMjU5NzAzNw@@._V1_.jpg',
+  'https://m.media-amazon.com/images/M/MV5BODg3MzYwMjE4N15BMl5BanBnXkFtZTcwMjU5NzAzNw@@._V1_.jpg',
+  'https://m.media-amazon.com/images/M/MV5BODg3MzYwMjE4N15BMl5BanBnXkFtZTcwMjU5NzAzNw@@._V1_.jpg',
+  'https://m.media-amazon.com/images/M/MV5BODg3MzYwMjE4N15BMl5BanBnXkFtZTcwMjU5NzAzNw@@._V1_.jpg',
 ];
